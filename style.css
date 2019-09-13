@@ -1,0 +1,121 @@
+body{
+  margin: 0;
+  padding: 0;
+
+}
+
+canvas{
+  border: 3px solid black;
+  /* margin:5px; */
+}
+
+@keyframes shadow-pulse
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(219, 107, 88);
+  }
+  100% {
+    box-shadow: 0 0 0 35px rgba(219, 107, 88);
+  }
+}
+
+@keyframes shadow-pulse2
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(219, 203, 145);
+
+  }
+  100% {
+    box-shadow: 0 0 0 35px rgba(219, 107, 88);
+  }
+}
+
+.teacherButton{
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+  background-image: url("assets/teacherImage.png");
+  border:1px solid #fcba03;
+  border-radius: 350px;
+  background-size:100% 100%;
+  opacity: 0.5;
+  box-shadow: 0 0 0 0 rgba(232, 76, 61, 0.7);
+  outline: none;
+  /* box-shadow: 0 0 0 35px rgba(0, 0, 0, 0); */
+}
+.teacherButton:hover {
+  opacity: 1;
+  animation: shadow-pulse 1s infinite;
+}
+
+.studentButton{
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+  background-image: url("assets/studentImage.png");
+  border:1px solid #fcba03;
+  border-radius: 350px;
+  background-size:100% 100%;
+  opacity: 0.5;
+  outline: none;
+}
+.studentButton:hover {
+  opacity: 1;
+  animation: shadow-pulse 1s infinite;
+}
+
+.science{
+  width:150px;
+  height: 150px;
+  background-image: url("assets/science.jpg");
+  border-radius: 350px;
+  background-size:100% 100%;
+  outline: none;
+  border:none;
+}
+
+.science:hover {
+  opacity: 1;
+  animation: shadow-pulse2 1s infinite;
+}
+
+
+.mathematics{
+  width:150px;
+  height: 150px;
+  background-image: url("assets/mathematics.jpg");
+  border-radius: 350px;
+  background-size:100% 100%;
+  outline: none;
+  border:none;
+}
+
+.socialscience{
+  width:150px;
+  height: 150px;
+  background-image: url("assets/socialscience.jpg");
+  border-radius: 350px;
+  background-size:100% 100%;
+  outline: none;
+  border:none;
+}
+
+.english{
+  width:150px;
+  height: 150px;
+  background-image: url("assets/english.jpg");
+  border-radius: 350px;
+  background-size:100% 100%;
+  outline: none;
+  border:none;
+}
+
+.hindi{
+  width:150px;
+  height: 150px;
+  background-image: url("assets/hindi.jpg");
+  border-radius: 350px;
+  background-size:100% 100%;
+  outline: none;
+  border:none;
+}
