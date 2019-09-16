@@ -4,7 +4,7 @@ class Student {
   }
 
   login() {
-    app.updateState("student");
+    app.appState = "student";
   }
 
   display() {

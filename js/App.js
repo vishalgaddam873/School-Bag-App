@@ -1,6 +1,6 @@
 class App {
     constructor() {
-      this.appState=undefined;
+      this.appState="open";
       this.form = new Form();
       this.teacher = new Teacher();
       this.student = new Student();
@@ -8,31 +8,27 @@ class App {
       this.books = new Books();
      }
 
-    getState() {
-      var appState = database.ref('appState').on("value",(state)=>{
-        this.appState = state.val();
-      });
-      console.log("App State:-",this.appState);
-    }
-
-    updateState(state) {
-      database.ref('/').update({
-        appState: state
-      });
-    }
-
     display() {
       switch(this.appState){
         case "open":
           this.form.display();
           break;
-        case "teacher":
-          this.teacher.display();
+        case "teacherlogin":
           this.form.hide();
+          this.teacher.login();
+          break;
+        case "subjects":
+          this.teacher.hide();
+          this.subjects.getSubjects();
+          this.subjects.display();
+          break;
+        case "notebooks":
+          this.subjects.showBooks();
           break;
         case "student":
-          this.student.display();
           this.form.hide();
+          this.teacher.hide();
+          this.student.display();
           break;
       }
     }
